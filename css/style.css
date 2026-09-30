@@ -795,7 +795,7 @@ body::after {
   -o-object-fit: cover;
   object-fit: cover
 }
-.about__content {
+.about__content-inner {
   display: flex;
   flex-direction: column;
   gap: 20px
@@ -918,7 +918,7 @@ body::after {
   transition: background-color .5s ease,opacity 2s cubic-bezier(.16,1,.3,1),transform 2s cubic-bezier(.16,1,.3,1);
   transition: background-color .5s ease,opacity 2s cubic-bezier(.16,1,.3,1),transform 2s cubic-bezier(.16,1,.3,1),-webkit-transform 2s cubic-bezier(.16,1,.3,1)
 }
-.work-main__nav-item._watcher-view {
+._watcher-view>.work-main__nav-item {
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0)
@@ -1327,20 +1327,7 @@ body::after {
   align-items: center;
   gap: 14px;
   width: 100%;
-  aspect-ratio: 365/230;
-  opacity: 0;
-  -webkit-transform: translateX(-400px);
-  transform: translateX(-400px);
-  transition: all 2s cubic-bezier(.16,1,.3,1)
-}
-.reverse .workspaces__gallery {
-  -webkit-transform: translateX(400px);
-  transform: translateX(400px)
-}
-.workspaces__gallery._watcher-view {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0)
+  aspect-ratio: 365/230
 }
 .workspaces__gallery-left {
   flex: 0 0 calc(45% - 7px);
@@ -1388,22 +1375,9 @@ body::after {
 .workspaces__gallery-right .workspaces__gallery-image.small {
   width: 85%
 }
-.workspaces__content {
+.workspaces__content-inner {
   display: flex;
-  flex-direction: column;
-  opacity: 0;
-  -webkit-transform: translateX(400px);
-  transform: translateX(400px);
-  transition: all 2s cubic-bezier(.16,1,.3,1)
-}
-.reverse .workspaces__content {
-  -webkit-transform: translateX(-400px);
-  transform: translateX(-400px)
-}
-.workspaces__content._watcher-view {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0)
+  flex-direction: column
 }
 .workspaces__content-title {
   margin-bottom: 15px;
@@ -1828,34 +1802,29 @@ body::after {
 }
 .watcher-element {
   opacity: 0;
-  transition: all 2s cubic-bezier(.16,1,.3,1)
-}
-.watcher-element._watcher-view {
-  opacity: 1
+  transition: opacity 2s cubic-bezier(.16,1,.3,1),-webkit-transform 2s cubic-bezier(.16,1,.3,1);
+  transition: opacity 2s cubic-bezier(.16,1,.3,1),transform 2s cubic-bezier(.16,1,.3,1);
+  transition: opacity 2s cubic-bezier(.16,1,.3,1),transform 2s cubic-bezier(.16,1,.3,1),-webkit-transform 2s cubic-bezier(.16,1,.3,1)
 }
 .watcher-element.left-x {
   -webkit-transform: translateX(-400px);
   transform: translateX(-400px)
 }
-.watcher-element.left-x._watcher-view {
-  -webkit-transform: translateX(0);
-  transform: translateX(0)
-}
 .watcher-element.right-x {
   -webkit-transform: translateX(400px);
   transform: translateX(400px)
-}
-.watcher-element.right-x._watcher-view {
-  -webkit-transform: translateX(0);
-  transform: translateX(0)
 }
 .watcher-element.bottom-y {
   -webkit-transform: translateY(400px);
   transform: translateY(400px)
 }
-.watcher-element.bottom-y._watcher-view {
-  -webkit-transform: translateY(0);
-  transform: translateY(0)
+._watcher-view>.watcher-element {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none
+}
+span.watcher-element {
+  display: block
 }
 @media (min-width:29.99875em) {
   .work-main__title {
@@ -2133,7 +2102,7 @@ body::after {
     flex: 0 0 500px;
     width: 500px
   }
-  .reverse .workspaces__content {
+  .reverse .workspaces__content-inner {
     align-items: flex-end
   }
   .workspaces__content-title {
@@ -2536,7 +2505,7 @@ body::after {
   .about__body {
     gap: 60px
   }
-  .about__content {
+  .about__content-inner {
     gap: 25px
   }
   .about__content-title {
