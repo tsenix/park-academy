@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20260928120415">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260930151718">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,13 +28,12 @@
 					</a>
 
 					<nav class="header__navigation">
-						<a href="index.html" class="header__link active">Home</a>
-						<a href="about.html" class="header__link">About us</a>
-						<a href="workspaces.html" class="header__link">Workspaces</a>
-						<a href="news.html" class="header__link">News</a>
-						<a href="#" class="header__link">Blog</a>
-						<a href="faq.html" class="header__link">FAQ</a>
-						<a href="contacts.html" class="header__link">Contacts</a>
+						<a href="index.html" class="header__link" data-nav-link>Home</a>
+						<a href="about.html" class="header__link" data-nav-link>About us</a>
+						<a href="workspaces.html" class="header__link" data-nav-link>Workspaces</a>
+						<a href="news.html" class="header__link" data-nav-link>News</a>
+						<a href="faq.html" class="header__link" data-nav-link>FAQ</a>
+						<a href="contacts.html" class="header__link" data-nav-link>Contacts</a>
 					</nav>
 
 					<select name="lang">
@@ -51,12 +50,13 @@
 
 			<div class="header__content">
 				<div class="_container">
-					<h2 class="header__title">A workspace where great ideas are born</h2>
-					<div class="header__border"></div>
-					<div class="header__text">Every great business begins with an idea. But ambition alone is never enough. It
+					<h2 class="header__title" data-watch data-watch-once>A workspace where great ideas are born</h2>
+					<div class="header__border" data-watch data-watch-once></div>
+					<div class="header__text" data-watch data-watch-once>Every great business begins with an idea. But ambition
+						alone is never enough. It
 						takes the right environment, the right circle and a level of service that matches the scale of your
 						goals</div>
-					<div class="header__button-container">
+					<div class="header__button-container" data-watch data-watch-once>
 						<a href="#" class="header__button button modal-cart-open">
 							<span>Request A Private View</span>
 						</a>
@@ -68,13 +68,12 @@
 		<div class="menu">
 			<div class="menu__container">
 				<nav class="menu__navigation">
-					<a href="index.html" class="menu__link active">Home</a>
-					<a href="about.html" class="menu__link">About us</a>
-					<a href="workspaces.html" class="menu__link">Workspaces</a>
-					<a href="news.html" class="menu__link">News</a>
-					<a href="#" class="menu__link">Blog</a>
-					<a href="faq.html" class="menu__link">FAQ</a>
-					<a href="contacts.html" class="menu__link">Contacts</a>
+					<a href="index.html" class="menu__link" data-nav-link>Home</a>
+					<a href="about.html" class="menu__link" data-nav-link>About us</a>
+					<a href="workspaces.html" class="menu__link" data-nav-link>Workspaces</a>
+					<a href="news.html" class="menu__link" data-nav-link>News</a>
+					<a href="faq.html" class="menu__link" data-nav-link>FAQ</a>
+					<a href="contacts.html" class="menu__link" data-nav-link>Contacts</a>
 				</nav>
 
 				<div class="menu__contacts">
@@ -106,14 +105,15 @@
 		<main class="page">
 			<section class="about section">
 				<div class="_container">
-					<h2 class="about__title section__title">About us</h2>
+					<h2 class="about__title section__title watcher-element left-x" data-watch data-watch-once>About us
+					</h2>
 
 					<div class="about__body">
-						<div class="about__image">
+						<div class="about__image watcher-element left-x" data-watch data-watch-once>
 							<img src="img/about/image01.jpg" alt="Image">
 						</div>
 
-						<div class="about__content">
+						<div class="about__content watcher-element right-x" data-watch data-watch-once>
 							<h3 class="about__content-title">A new address for business at the highest level</h3>
 							<p class="about__text">Park Academy Business is a prestigious business environment in Baku
 								where private offices, premium workspaces, hospitality, modern technology and
@@ -134,48 +134,208 @@
 
 			<section class="work-main section">
 				<div class="_container">
-					<h2 class="work-main__title section__title">Workspaces & Amenities</h2>
+					<h2 class="work-main__title section__title watcher-element left-x" data-watch data-watch-once>
+						Workspaces & Amenities</h2>
 
-					<div class="work-main__body">
-						<div class="work-main__gallery">
-							<div class="work-main__gallery-left">
-								<div class="work-main__gallery-image">
-									<img src="img/workspace/image01.jpg" alt="Image">
+					<div class="work-main__body" data-tabs>
+						<div class="work-main__gallery watcher-element left-x" data-watch data-watch-once data-tabs-body>
+							<div class="work-main__gallery-slide">
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image01.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image02.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image03.jpg" alt="Image">
+									</div>
 								</div>
 							</div>
 
-							<div class="work-main__gallery-right">
-								<div class="work-main__gallery-image">
-									<img src="img/workspace/image02.jpg" alt="Image">
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image04.jpg" alt="Image">
+									</div>
 								</div>
-								<div class="work-main__gallery-image">
-									<img src="img/workspace/image03.jpg" alt="Image">
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image05.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image06.jpg" alt="Image">
+									</div>
+								</div>
+							</div>
+
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image07.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image08.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image09.jpg" alt="Image">
+									</div>
+								</div>
+							</div>
+
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image01.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image02.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image03.jpg" alt="Image">
+									</div>
+								</div>
+							</div>
+
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image04.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image05.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image06.jpg" alt="Image">
+									</div>
+								</div>
+							</div>
+
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image07.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image08.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image09.jpg" alt="Image">
+									</div>
+								</div>
+							</div>
+
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image01.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image02.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image03.jpg" alt="Image">
+									</div>
+								</div>
+							</div>
+
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image04.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image05.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image06.jpg" alt="Image">
+									</div>
+								</div>
+							</div>
+
+							<div class="work-main__gallery-slide" hidden>
+								<div class="work-main__gallery-left">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image07.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div class="work-main__gallery-right">
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image08.jpg" alt="Image">
+									</div>
+									<div class="work-main__gallery-image">
+										<img src="img/workspace/image09.jpg" alt="Image">
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="work-main__content">
-							<div class="work-main__prom">
+						<div class="work-main__navigation" data-tabs-titles>
+							<div class="work-main__nav-item _tab-active" data-watch data-watch-once>
 								<img src="img/icon/star.svg" alt="Image">
 								<span>Private Offices</span>
 							</div>
-
-							<ul class="work-main__list">
-								<li class="work-main__item">Premium Coworking Spaces</li>
-								<li class="work-main__item">Meeting Rooms</li>
-								<li class="work-main__item">Winter Garden</li>
-								<li class="work-main__item">Event & Presentation Spaces</li>
-								<li class="work-main__item">Business Concierge</li>
-								<li class="work-main__item">Networking Community</li>
-								<li class="work-main__item">GYM</li>
-								<li class="work-main__item">Members Club</li>
-							</ul>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>Premium Coworking Spaces</span>
+							</div>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>Meeting Rooms</span>
+							</div>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>Winter Garden</span>
+							</div>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>Event & Presentation Spaces</span>
+							</div>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>Business Concierge</span>
+							</div>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>Networking Community</span>
+							</div>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>GYM</span>
+							</div>
+							<div class="work-main__nav-item" data-watch data-watch-once>
+								<img src="img/icon/star.svg" alt="Image">
+								<span>Members Club</span>
+							</div>
 						</div>
 					</div>
 
-					<div class="work-main__footer">
+					<div class="work-main__footer" data-watch data-watch-once>
 						<div class="work-main__button-wrap">
-							<a href="#" class="work-main__button button secondary fill">
+							<a href="contacts.html" class="work-main__button button secondary fill">
 								<svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M4.46774 19.0323H17.6452C20.2607 19.0323 21.5685 19.0323 22.381 18.2197C23.1936 17.4072 23.1936 16.0994 23.1936 13.4839V6.54839C23.1936 3.93285 23.1936 2.62509 22.381 1.81254C21.5685 1 20.2607 1 17.6452 1H6.54839C3.93285 1 2.62509 1 1.81254 1.81254C1 2.62509 1 3.93285 1 6.54839V22.5C1 20.5848 2.55256 19.0323 4.46774 19.0323ZM18.2561 7.93511C18.2561 6.83054 17.3607 5.93511 16.2561 5.93511L7.93383 5.93511C6.82926 5.93511 5.93383 6.83054 5.93383 7.93511C5.93383 9.03968 6.82926 9.93511 7.93383 9.93511L16.2561 9.93511C17.3607 9.93511 18.2561 9.03968 18.2561 7.93511Z" />
 									<path d="M22.381 18.2197L21.6739 17.5126L21.6739 17.5126L22.381 18.2197ZM22.381 1.81254L21.6739 2.51965L21.6739 2.51965L22.381 1.81254ZM16.2561 5.93511V6.93511V6.93511V5.93511ZM7.93383 5.93511V4.93511V4.93511V5.93511ZM7.93383 9.93511V8.93511V8.93511V9.93511ZM16.2561 9.93511V10.9351V10.9351V9.93511ZM17.6452 19.0323V18.0323H4.46774V19.0323V20.0323H17.6452V19.0323ZM22.381 18.2197L21.6739 17.5126C21.4844 17.7021 21.2005 17.853 20.556 17.9396C19.8826 18.0301 18.9812 18.0323 17.6452 18.0323V19.0323V20.0323C18.9247 20.0323 19.9849 20.0344 20.8225 19.9218C21.6888 19.8053 22.4651 19.5499 23.0881 18.9268L22.381 18.2197ZM23.1936 13.4839H22.1936C22.1936 14.8199 22.1914 15.7213 22.1009 16.3947C22.0142 17.0392 21.8634 17.3231 21.6739 17.5126L22.381 18.2197L23.0881 18.9268C23.7112 18.3038 23.9666 17.5275 24.0831 16.6612C24.1957 15.8236 24.1936 14.7634 24.1936 13.4839H23.1936ZM23.1936 6.54839H22.1936V13.4839H23.1936H24.1936V6.54839H23.1936ZM22.381 1.81254L21.6739 2.51965C21.8634 2.70915 22.0142 2.99303 22.1009 3.63759C22.1914 4.31092 22.1936 5.21235 22.1936 6.54839H23.1936H24.1936C24.1936 5.26889 24.1957 4.20867 24.0831 3.3711C23.9666 2.50475 23.7112 1.72848 23.0881 1.10544L22.381 1.81254ZM17.6452 1V2C18.9812 2 19.8826 2.00212 20.556 2.09265C21.2005 2.17931 21.4844 2.33015 21.6739 2.51965L22.381 1.81254L23.0881 1.10544C22.4651 0.482396 21.6888 0.226961 20.8225 0.110485C19.9849 -0.00212371 18.9247 0 17.6452 0V1ZM6.54839 1V2H17.6452V1V0H6.54839V1ZM1.81254 1.81254L2.51965 2.51965C2.70915 2.33015 2.99303 2.17931 3.63759 2.09265C4.31092 2.00212 5.21235 2 6.54839 2V1V0C5.26889 0 4.20867 -0.00212371 3.3711 0.110485C2.50476 0.226961 1.72848 0.482396 1.10544 1.10544L1.81254 1.81254ZM1 6.54839H2C2 5.21235 2.00212 4.31092 2.09265 3.63759C2.17931 2.99303 2.33015 2.70915 2.51965 2.51965L1.81254 1.81254L1.10544 1.10544C0.482396 1.72848 0.226961 2.50476 0.110485 3.3711C-0.00212371 4.20867 0 5.26889 0 6.54839H1ZM1 22.5H2V6.54839H1H0V22.5H1ZM4.46774 19.0323V18.0323C2.00028 18.0323 0 20.0325 0 22.5H1H2C2 21.1371 3.10485 20.0323 4.46774 20.0323V19.0323ZM16.2561 5.93511V6.93511C16.8084 6.93511 17.2561 7.38283 17.2561 7.93511H18.2561H19.2561C19.2561 6.27826 17.913 4.93511 16.2561 4.93511V5.93511ZM7.93383 5.93511V6.93511L16.2561 6.93511V5.93511V4.93511L7.93383 4.93511V5.93511ZM5.93383 7.93511H6.93383C6.93383 7.38283 7.38155 6.93511 7.93383 6.93511V5.93511V4.93511C6.27698 4.93511 4.93383 6.27826 4.93383 7.93511H5.93383ZM7.93383 9.93511V8.93511C7.38155 8.93511 6.93383 8.4874 6.93383 7.93511H5.93383H4.93383C4.93383 9.59197 6.27698 10.9351 7.93383 10.9351V9.93511ZM16.2561 9.93511V8.93511L7.93383 8.93511V9.93511V10.9351L16.2561 10.9351V9.93511ZM18.2561 7.93511H17.2561C17.2561 8.4874 16.8084 8.93511 16.2561 8.93511V9.93511V10.9351C17.913 10.9351 19.2561 9.59197 19.2561 7.93511H18.2561ZM10.7097 25.9677V24.9677H4.46774V25.9677V26.9677H10.7097V25.9677ZM1 22.5H0C0 24.9675 2.00028 26.9677 4.46774 26.9677V25.9677V24.9677C3.10485 24.9677 2 23.8629 2 22.5H1Z" />
@@ -185,7 +345,7 @@
 						</div>
 
 						<div class="work-main__button-wrap">
-							<a href="#" class="work-main__button button secondary stroke">
+							<a href="workspaces.html" class="work-main__button button secondary stroke">
 								<span>Learn more</span>
 								<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -198,91 +358,100 @@
 
 			<section class="news-main section">
 				<div class="_container">
-					<h2 class="news-main__title section__title center">Park Academy Business News</h2>
+					<h2 class="news-main__title section__title center watcher-element left-x" data-watch data-watch-once>Park Academy Business News</h2>
 
-					<div class="news-main__subtitle">Project updates, new spaces, Private Viewing and the evolution of
+					<div class="news-main__subtitle" data-watch data-watch-once>Project updates, new spaces, Private
+						Viewing and the evolution of
 						the Park Academy Business community.</div>
 
 					<div class="news-main__body">
-						<div class="news-main__item">
-							<div class="news-main__item-image">
-								<img src="img/news/image01.jpg" alt="Image">
+						<a href="article.html" class="news-main__item" data-watch data-watch-once>
+							<div class="news-main__item-wrap">
+								<div class="news-main__item-image">
+									<img src="img/news/image01.jpg" alt="Image">
+								</div>
+								<div class="news-main__item-row">
+									<div class="news-main__item-num">01</div>
+									<div class="news-main__item-date">14 JUL</div>
+								</div>
+								<h3 class="news-main__item-title">Event on Modern Marketing in Trade</h3>
+								<div class="news-main__item-btn-wrap">
+									<div class="news-main__item-btn button brown stroke">
+										<span>Learn More</span>
+										<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+								</div>
 							</div>
-							<div class="news-main__item-row">
-								<div class="news-main__item-num">01</div>
-								<div class="news-main__item-date">14 JUL</div>
-							</div>
-							<h3 class="news-main__item-title">Event on Modern Marketing in Trade</h3>
-							<div class="news-main__item-btn-wrap">
-								<a href="#" class="news-main__item-btn button brown stroke">
-									<span>Learn More</span>
-									<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</a>
-							</div>
-						</div>
+						</a>
 
-						<div class="news-main__item">
-							<div class="news-main__item-image">
-								<img src="img/news/image02.jpg" alt="Image">
+						<a href="article.html" class="news-main__item" data-watch data-watch-once>
+							<div class="news-main__item-wrap">
+								<div class="news-main__item-image">
+									<img src="img/news/image02.jpg" alt="Image">
+								</div>
+								<div class="news-main__item-row">
+									<div class="news-main__item-num">01</div>
+									<div class="news-main__item-date">14 JUL</div>
+								</div>
+								<h3 class="news-main__item-title">Business Networking Evening</h3>
+								<div class="news-main__item-btn-wrap">
+									<div class="news-main__item-btn button brown stroke">
+										<span>Learn More</span>
+										<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+								</div>
 							</div>
-							<div class="news-main__item-row">
-								<div class="news-main__item-num">01</div>
-								<div class="news-main__item-date">14 JUL</div>
-							</div>
-							<h3 class="news-main__item-title">Business Networking Evening</h3>
-							<div class="news-main__item-btn-wrap">
-								<a href="#" class="news-main__item-btn button brown stroke">
-									<span>Learn More</span>
-									<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</a>
-							</div>
-						</div>
+						</a>
 
-						<div class="news-main__item">
-							<div class="news-main__item-image">
-								<img src="img/news/image03.jpg" alt="Image">
+						<a href="article.html" class="news-main__item" data-watch data-watch-once>
+							<div class="news-main__item-wrap">
+								<div class="news-main__item-image">
+									<img src="img/news/image03.jpg" alt="Image">
+								</div>
+								<div class="news-main__item-row">
+									<div class="news-main__item-num">01</div>
+									<div class="news-main__item-date">14 JUL</div>
+								</div>
+								<h3 class="news-main__item-title">Al Tools for Business</h3>
+								<div class="news-main__item-btn-wrap">
+									<div class="news-main__item-btn button brown stroke">
+										<span>Learn More</span>
+										<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+								</div>
 							</div>
-							<div class="news-main__item-row">
-								<div class="news-main__item-num">01</div>
-								<div class="news-main__item-date">14 JUL</div>
-							</div>
-							<h3 class="news-main__item-title">Al Tools for Business</h3>
-							<div class="news-main__item-btn-wrap">
-								<a href="#" class="news-main__item-btn button brown stroke">
-									<span>Learn More</span>
-									<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</a>
-							</div>
-						</div>
+						</a>
 
-						<div class="news-main__item">
-							<div class="news-main__item-image">
-								<img src="img/news/image04.jpg" alt="Image">
+						<a href="article.html" class="news-main__item" data-watch data-watch-once>
+							<div class="news-main__item-wrap">
+								<div class="news-main__item-image">
+									<img src="img/news/image04.jpg" alt="Image">
+								</div>
+								<div class="news-main__item-row">
+									<div class="news-main__item-num">01</div>
+									<div class="news-main__item-date">14 JUL</div>
+								</div>
+								<h3 class="news-main__item-title">Startup Pitch Session</h3>
+								<div class="news-main__item-btn-wrap">
+									<div class="news-main__item-btn button brown stroke">
+										<span>Learn More</span>
+										<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+								</div>
 							</div>
-							<div class="news-main__item-row">
-								<div class="news-main__item-num">01</div>
-								<div class="news-main__item-date">14 JUL</div>
-							</div>
-							<h3 class="news-main__item-title">Startup Pitch Session</h3>
-							<div class="news-main__item-btn-wrap">
-								<a href="#" class="news-main__item-btn button brown stroke">
-									<span>Learn More</span>
-									<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</a>
-							</div>
-						</div>
+						</a>
 					</div>
 
-					<div class="news-main__btn-wrap">
-						<a href="#" class="news-main__btn button stroke brown">
+					<div class="news-main__btn-wrap" data-watch data-watch-once>
+						<a href="news.html" class="news-main__btn button stroke brown">
 							<span>View All News</span>
 							<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -294,19 +463,20 @@
 
 			<section class="blog section">
 				<div class="_container">
-					<h2 class="blog__title section__title center">Blog</h2>
+					<h2 class="blog__title section__title center watcher-element left-x" data-watch data-watch-once>Blog
+					</h2>
 
 					<div class="blog__body">
-						<div class="blog__content">
-							<div class="blog__image">
+						<div class="blog__content watcher-element left-x" data-watch data-watch-once>
+							<a href="article.html" class="blog__image">
 								<img src="img/blog/image01.jpg" alt="Image">
-							</div>
+							</a>
 							<div class="blog__date">JULY 14, 2026 • 18:25</div>
 							<h3 class="blog__content-title">Park Academy New Private Offices Opens</h3>
 							<p class="blog__text">We are excited to announce the opening of new private offices,
 								designed for businesses that value comfort, focus and growth.</p>
 							<div class="blog__btn-wrap">
-								<a href="#" class="blog__btn button secondary stroke">
+								<a href="news.html" class="blog__btn button secondary stroke">
 									<span>See All Blogs</span>
 									<svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M48.5 8L1 8M41.75 15L48.5 8L41.75 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -315,37 +485,45 @@
 							</div>
 						</div>
 
-						<ul class="blog__list">
-							<li class="blog__article">
-								<div class="blog__article-img">
-									<img src="img/blog/image02.jpg" alt="Image">
-								</div>
-								<div class="blog__article-content">
-									<div class="blog__article-date">JULY 14, 2026 • 18:25</div>
-									<div class="blog__article-title">Park Academy Launches a Series of Business Events
+						<div class="blog__list" data-watch data-watch-once>
+							<div class="blog__article">
+								<a href="article.html" class="blog__article-wrap watcher-element right-x" data-watch data-watch-once>
+									<div class="blog__article-img">
+										<img src="img/blog/image02.jpg" alt="Image">
 									</div>
-								</div>
-							</li>
-							<li class="blog__article">
-								<div class="blog__article-img">
-									<img src="img/blog/image03.jpg" alt="Image">
-								</div>
-								<div class="blog__article-content">
-									<div class="blog__article-date">JULY 14, 2026 • 18:25</div>
-									<div class="blog__article-title">New Services for Park Academy Residents</div>
-								</div>
-							</li>
-							<li class="blog__article">
-								<div class="blog__article-img">
-									<img src="img/blog/image04.jpg" alt="Image">
-								</div>
-								<div class="blog__article-content">
-									<div class="blog__article-date">JULY 14, 2026 • 18:25</div>
-									<div class="blog__article-title">Park Academy Strengthens Baku's Business Community
+									<div class="blog__article-content">
+										<div class="blog__article-date">JULY 14, 2026 • 18:25</div>
+										<div class="blog__article-title">Park Academy Launches a Series of Business
+											Events
+										</div>
 									</div>
-								</div>
-							</li>
-						</ul>
+								</a>
+							</div>
+							<div class="blog__article">
+								<a href="article.html" class="blog__article-wrap watcher-element right-x" data-watch data-watch-once>
+									<div class="blog__article-img">
+										<img src="img/blog/image03.jpg" alt="Image">
+									</div>
+									<div class="blog__article-content">
+										<div class="blog__article-date">JULY 14, 2026 • 18:25</div>
+										<div class="blog__article-title">New Services for Park Academy Residents</div>
+									</div>
+								</a>
+							</div>
+							<div class="blog__article">
+								<a href="article.html" class="blog__article-wrap watcher-element right-x" data-watch data-watch-once>
+									<div class="blog__article-img">
+										<img src="img/blog/image04.jpg" alt="Image">
+									</div>
+									<div class="blog__article-content">
+										<div class="blog__article-date">JULY 14, 2026 • 18:25</div>
+										<div class="blog__article-title">Park Academy Strengthens Baku's Business
+											Community
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -515,7 +693,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20260928120415"></script>
+	<script src="js/app.min.js?_v=20260930151718"></script>
 </body>
 
 </html>
