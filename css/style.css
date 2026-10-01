@@ -842,9 +842,9 @@ body::after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
-  transition: opacity .3s ease,visibility .3s ease,-webkit-transform .3s ease;
-  transition: opacity .3s ease,transform .3s ease,visibility .3s ease;
-  transition: opacity .3s ease,transform .3s ease,visibility .3s ease,-webkit-transform .3s ease
+  transition: opacity 1.5s ease,visibility 1.5s ease,-webkit-transform 1.5s ease;
+  transition: opacity 1.5s ease,transform 1.5s ease,visibility 1.5s ease;
+  transition: opacity 1.5s ease,transform 1.5s ease,visibility 1.5s ease,-webkit-transform 1.5s ease
 }
 .work-main__gallery-slide[hidden] {
   opacity: 0;
@@ -1771,7 +1771,17 @@ body::after {
   display: none
 }
 .map {
-  display: none
+  padding: 45px 0 80px
+}
+.map__title {
+  margin-bottom: 45px;
+  font-size: 50px;
+  text-align: center
+}
+.map__container {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden
 }
 .map__container iframe {
   position: absolute;
@@ -1836,6 +1846,9 @@ span.watcher-element {
   .form__button {
     max-width: 440px
   }
+  .map__container {
+    padding-top: 75%
+  }
 }
 @media (min-width:47.99875em) {
   .footer__contacts {
@@ -1882,6 +1895,9 @@ span.watcher-element {
   }
   .news__item:nth-child(2n) .news__item-wrap {
     transition-delay: .3s
+  }
+  .map__container {
+    padding-top: 50%
   }
 }
 @media (min-width:61.99875em) {
@@ -2211,19 +2227,13 @@ span.watcher-element {
     border-left-color: #73957f
   }
   .map {
-    display: block;
     padding: 50px 0 150px
   }
   .map__title {
-    margin-bottom: 45px;
-    font-size: 80px;
-    text-transform: uppercase;
-    text-align: center
+    font-size: 80px
   }
   .map__container {
-    position: relative;
-    padding-top: 35%;
-    overflow: hidden
+    padding-top: 35%
   }
   .about-page {
     padding: 55px 0 0
