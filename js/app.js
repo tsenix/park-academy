@@ -4044,6 +4044,31 @@
                     }));
                 }
             }
+            function setTabsScroll(tabsBlock) {
+                const scrollBreakpoint = tabsBlock.dataset.tabsScroll;
+                if (scrollBreakpoint && window.matchMedia(`(max-width: ${scrollBreakpoint}px)`).matches) {
+                    const offset = 20;
+                    const scrollParent = getScrollParent(tabsBlock);
+                    const scrollParentTop = scrollParent === window ? 0 : scrollParent.getBoundingClientRect().top;
+                    const tabsBlockTop = tabsBlock.getBoundingClientRect().top - scrollParentTop;
+                    if (tabsBlockTop < 0) {
+                        const currentScroll = scrollParent === window ? window.scrollY : scrollParent.scrollTop;
+                        scrollParent.scrollTo({
+                            top: tabsBlockTop + currentScroll - offset,
+                            behavior: "smooth"
+                        });
+                    }
+                }
+            }
+            function getScrollParent(element) {
+                let parent = element.parentElement;
+                while (parent && parent !== document.body && parent !== document.documentElement) {
+                    const overflowY = getComputedStyle(parent).overflowY;
+                    if ((overflowY === "auto" || overflowY === "scroll") && parent.scrollHeight > parent.clientHeight) return parent;
+                    parent = parent.parentElement;
+                }
+                return window;
+            }
             function setTabsAction(e) {
                 const el = e.target;
                 if (el.closest("[data-tabs-title]")) {
@@ -4055,6 +4080,7 @@
                         tabActiveTitle.length ? tabActiveTitle[0].classList.remove("_tab-active") : null;
                         tabTitle.classList.add("_tab-active");
                         setTabsStatus(tabsBlock);
+                        setTabsScroll(tabsBlock);
                     }
                     e.preventDefault();
                 }

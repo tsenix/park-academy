@@ -904,10 +904,10 @@ body::after {
   gap: 5px
 }
 .work-main__nav-item {
-  padding: 20px 30px;
+  padding: 20px 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   background-color: rgba(0,0,0,0);
   border-radius: 28px;
   cursor: pointer;
@@ -927,15 +927,18 @@ body::after {
   color: #73957f
 }
 .work-main__nav-item._tab-active {
+  padding: 20px 30px;
+  gap: 10px;
   background-color: #e3e2ca;
   cursor: default
 }
 .work-main__nav-item._tab-active img {
+  width: 33px;
   opacity: 1;
   visibility: visible
 }
 .work-main__nav-item img {
-  width: 33px;
+  width: 0;
   height: 33px;
   opacity: 0;
   visibility: hidden;
@@ -2055,6 +2058,9 @@ span.watcher-element {
   .work-main__navigation {
     flex: 0 0 350px
   }
+  .work-main__nav-item {
+    padding: 20px 30px
+  }
   .work-main__footer {
     gap: 50px
   }
@@ -2066,7 +2072,7 @@ span.watcher-element {
   }
   .work-main__button-wrap:last-child {
     flex: 0 0 350px;
-    padding-left: 50px
+    padding-left: 30px
   }
   .news-main__item:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,.2)
