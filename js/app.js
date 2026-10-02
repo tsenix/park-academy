@@ -4782,16 +4782,6 @@
             }));
         }
         document.querySelectorAll("form.form").forEach(initForm);
-        const navLinks = document.querySelectorAll("[data-nav-link]");
-        if (navLinks.length) {
-            const getPage = path => path.split("/").pop() || "index.html";
-            const currentPage = document.body.dataset.nav || getPage(location.pathname);
-            navLinks.forEach((link => {
-                const isActive = getPage(new URL(link.href).pathname) === currentPage;
-                link.classList.toggle("active", isActive);
-                if (isActive) link.setAttribute("aria-current", "page");
-            }));
-        }
         addLoadedClass();
         spollers();
         tabs();
