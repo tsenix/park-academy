@@ -132,12 +132,8 @@ html {
   background-color: #fff
 }
 .header.header-main {
-  height: 100vh;
   padding: 30px 0 60px;
   background-color: #000
-}
-.loaded .header.header-main {
-  height: auto
 }
 .header__top {
   position: relative
@@ -1914,7 +1910,12 @@ span.watcher-element {
     padding: 35px 0
   }
   .header.header-main {
-    padding: 35px 0 75px
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100svh;
+    padding: 35px 0 4%
   }
   .header__top {
     z-index: 2;
@@ -1967,10 +1968,25 @@ span.watcher-element {
     margin: 0
   }
   .header__content {
-    z-index: 2
+    z-index: 2;
+    flex: 1 1 auto;
+    display: flex
+  }
+  .header__content ._container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
   }
   .header__title {
-    font-size: 75px
+    margin-bottom: 0;
+    font-size: clamp(48px,min(5.5vw,9vh),100px)
+  }
+  .header__border {
+    margin-bottom: 0
+  }
+  .header__text {
+    margin-bottom: 0
   }
   .header__button-container {
     justify-content: center
@@ -2280,19 +2296,13 @@ span.watcher-element {
   .header__content ._container {
     width: 1050px
   }
-  .header__title {
-    margin-bottom: 35px;
-    font-size: 100px
-  }
   .header__border {
-    margin-bottom: 55px;
     height: 24px
   }
   .header__border._watcher-view {
     width: 400px
   }
   .header__text {
-    margin-bottom: 115px;
     font-size: 22px
   }
   .about__body {
