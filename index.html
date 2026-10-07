@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20261003171643">
+	<link rel="stylesheet" href="css/style.min.css?_v=20261007125814">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,10 @@
 			</div>
 
 			<div class="header__video">
-				<video src="img/video.mp4" poster="img/video-first-frame.jpg" autoplay loop muted playsinline></video>
+				<video poster="img/video-first-frame.jpg" autoplay loop muted playsinline disablepictureinpicture disableremoteplayback aria-hidden="true">
+					<source src="img/video-720.mp4" type="video/mp4" media="(max-width: 991.98px)">
+					<source src="img/video-1080.mp4" type="video/mp4">
+				</video>
 			</div>
 
 			<div class="header__content">
@@ -696,7 +699,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20261003171643"></script>
+	<script src="js/app.min.js?_v=20261007125814"></script>
 </body>
 
 </html>
