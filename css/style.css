@@ -232,6 +232,32 @@ html {
   -o-object-fit: cover;
   object-fit: cover
 }
+.header__video-btn {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  right: 15px;
+  height: 54px;
+  width: 54px;
+  opacity: .4;
+  cursor: pointer;
+  transition: all .5s ease
+}
+.header__video-btn.active svg {
+  fill: #fff
+}
+.header__video-btn:hover {
+  opacity: 1
+}
+.header__video-btn:not(.active):hover {
+  opacity: 1
+}
+.header__video-btn svg {
+  width: 100%;
+  height: 100%;
+  stroke: #fff;
+  transition: all .5s ease
+}
 .header__content {
   position: relative
 }
@@ -1967,10 +1993,23 @@ span.watcher-element {
     padding: 0;
     margin: 0
   }
+  .header__video-btn {
+    right: 60px;
+    bottom: 60px
+  }
+  .header__video-btn:hover svg {
+    stroke: #73957f;
+    fill: #73957f
+  }
+  .header__video-btn:not(.active):hover svg {
+    stroke: #73957f;
+    fill: transparent
+  }
   .header__content {
     z-index: 2;
     flex: 1 1 auto;
-    display: flex
+    display: flex;
+    pointer-events: none
   }
   .header__content ._container {
     height: 100%;
@@ -1990,6 +2029,9 @@ span.watcher-element {
   }
   .header__button-container {
     justify-content: center
+  }
+  .header__button {
+    pointer-events: auto
   }
   .footer__contact:hover svg {
     fill: #73957f

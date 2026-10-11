@@ -4691,6 +4691,24 @@
             header.classList.toggle("menu-active");
             document.documentElement.classList.toggle("lock");
         }));
+        const headerVideo = document.querySelector(".header__video video");
+        const headerVideoBtn = document.querySelector(".header__video-btn");
+        if (headerVideo && headerVideoBtn) {
+            const setHeaderVideoMuted = muted => {
+                headerVideo.muted = muted;
+                headerVideoBtn.classList.toggle("active", !muted);
+            };
+            headerVideoBtn.addEventListener("click", (() => {
+                setHeaderVideoMuted(!headerVideo.muted);
+                if (headerVideo.paused) headerVideo.play().catch((() => {}));
+            }));
+            const headerVideoObserver = new IntersectionObserver((entries => {
+                if (entries.some((entry => !entry.isIntersecting))) setHeaderVideoMuted(true);
+            }), {
+                root: headerVideo.closest(".wrapper")
+            });
+            headerVideoObserver.observe(headerVideo);
+        }
         document.addEventListener("DOMContentLoaded", (() => {
             const infoBodies = document.querySelectorAll(".info__body");
             if (!infoBodies.length) return;
