@@ -206,7 +206,7 @@ html {
 }
 .header__video {
   position: relative;
-  margin: 20px 0 5px;
+  margin: 20px 0 80px;
   padding-top: 55%;
   overflow: hidden
 }
@@ -235,35 +235,48 @@ html {
 .header__video-btn {
   position: absolute;
   z-index: 5;
-  bottom: 0;
-  right: 15px;
-  height: 54px;
-  width: 54px;
-  opacity: .4;
+  bottom: 5px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all .5s ease
 }
 .header__video-btn.active svg {
-  fill: #fff
+  stroke: #73957f
 }
-.header__video-btn:hover {
-  opacity: 1
+.header__video-btn.active svg:first-child {
+  opacity: 0;
+  visibility: hidden
 }
-.header__video-btn:not(.active):hover {
-  opacity: 1
+.header__video-btn.active svg:last-child {
+  opacity: 1;
+  visibility: visible
 }
 .header__video-btn svg {
-  width: 100%;
-  height: 100%;
-  stroke: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 30px;
+  height: 30px;
+  stroke: #7f7f7f;
   transition: all .5s ease
+}
+.header__video-btn svg:last-child {
+  opacity: 0;
+  visibility: hidden
 }
 .header__content {
   position: relative
 }
 .header__title {
-  margin-bottom: 20px;
-  max-width: 880px;
+  margin-bottom: 80px;
+  max-width: 990px;
   font-size: 53px;
   font-weight: 700;
   font-family: PlusJakartaSans,sans-serif;
@@ -277,34 +290,6 @@ html {
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0)
-}
-.header__border {
-  margin-bottom: 35px;
-  height: 14px;
-  background-color: #73957f;
-  border-radius: 18px;
-  opacity: 0;
-  width: 0;
-  transition: all 2s cubic-bezier(.16,1,.3,1)
-}
-.header__border._watcher-view {
-  opacity: 1;
-  width: 35%
-}
-.header__text {
-  margin-bottom: 35px;
-  max-width: 850px;
-  font-family: PlusJakartaSans,sans-serif;
-  color: #fff;
-  opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  transition: all 2s cubic-bezier(.16,1,.3,1)
-}
-.header__text._watcher-view {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1)
 }
 .header__button-container {
   display: flex;
@@ -1941,7 +1926,10 @@ span.watcher-element {
     flex-direction: column;
     height: 100vh;
     height: 100svh;
-    padding: 35px 0 4%
+    padding: 35px 0 35px
+  }
+  .header.header-main {
+    padding: 35px 0 75px
   }
   .header__top {
     z-index: 2;
@@ -1998,12 +1986,10 @@ span.watcher-element {
     bottom: 60px
   }
   .header__video-btn:hover svg {
-    stroke: #73957f;
-    fill: #73957f
+    stroke: #73957f
   }
   .header__video-btn:not(.active):hover svg {
-    stroke: #73957f;
-    fill: transparent
+    stroke: #73957f
   }
   .header__content {
     z-index: 2;
@@ -2015,17 +2001,16 @@ span.watcher-element {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    align-items: center
   }
   .header__title {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0;
-    font-size: clamp(48px,min(5.5vw,9vh),100px)
-  }
-  .header__border {
-    margin-bottom: 0
-  }
-  .header__text {
-    margin-bottom: 0
+    max-width: 620px;
+    font-size: 65px
   }
   .header__button-container {
     justify-content: center
@@ -2338,15 +2323,6 @@ span.watcher-element {
   .header__content ._container {
     width: 1050px
   }
-  .header__border {
-    height: 24px
-  }
-  .header__border._watcher-view {
-    width: 400px
-  }
-  .header__text {
-    font-size: 22px
-  }
   .about__body {
     flex-direction: row;
     align-items: center;
@@ -2507,6 +2483,10 @@ span.watcher-element {
   .header__logo {
     height: 150px
   }
+  .header__title {
+    max-width: 730px;
+    font-size: 75px
+  }
   .footer {
     padding: 100px 0
   }
@@ -2573,6 +2553,10 @@ span.watcher-element {
   }
   .header__logo {
     height: 190px
+  }
+  .header__title {
+    max-width: 970px;
+    font-size: 100px
   }
   .about__body {
     gap: 60px
