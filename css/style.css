@@ -1191,7 +1191,7 @@ body::after {
   font-size: 24px
 }
 .info {
-  padding: 40px 0 80px;
+  padding: 20px 0 60px;
   background-color: #fff
 }
 .info.secondary {
@@ -1205,9 +1205,20 @@ body::after {
   background-color: #fff
 }
 .info__body {
-  display: flex;
-  flex-direction: column;
-  gap: 20px
+  display: flow-root
+}
+.info__body blockquote,
+.info__body h1,
+.info__body h2,
+.info__body h3,
+.info__body h4,
+.info__body h5,
+.info__body h6,
+.info__body img,
+.info__body ol,
+.info__body p,
+.info__body ul {
+  margin-bottom: 20px
 }
 .info__body h1 {
   font-size: 60px
@@ -1232,7 +1243,8 @@ body::after {
 }
 .info__body img {
   display: inline-block;
-  width: 100%
+  width: 100%;
+  height: auto
 }
 .info__body a {
   color: #73957f;
@@ -1240,6 +1252,7 @@ body::after {
   transition: all .5s ease
 }
 .info__body blockquote {
+  display: flow-root;
   padding: 25px 20px;
   background-color: #e3e2ca;
   border-radius: 10px
@@ -1525,17 +1538,6 @@ body::after {
   margin-bottom: 35px;
   font-size: 50px
 }
-.article__content p {
-  margin-bottom: 20px
-}
-.article__content p:last-child {
-  margin-bottom: 0
-}
-.article__content img {
-  display: inline-block;
-  margin-bottom: 20px;
-  width: 100%
-}
 .faq {
   padding: 45px 0 80px
 }
@@ -1804,22 +1806,6 @@ body::after {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover
-}
-.about-page {
-  padding: 45px 0 50px
-}
-.about-page__title {
-  margin-bottom: 35px;
-  font-size: 50px;
-  text-align: center
-}
-.about-page__body img {
-  margin-bottom: 20px;
-  display: block;
-  width: 100%
-}
-.about-page p {
-  margin-bottom: 20px
 }
 .watcher-element {
   opacity: 0;
@@ -2128,10 +2114,32 @@ span.watcher-element {
     box-shadow: 0 4px 20px rgba(0,0,0,.2)
   }
   .info {
-    padding: 50px 0 100px
+    padding: 20px 0 75px
   }
-  .info__body {
-    gap: 25px
+  .info__body blockquote,
+  .info__body h1,
+  .info__body h2,
+  .info__body h3,
+  .info__body h4,
+  .info__body h5,
+  .info__body h6,
+  .info__body img,
+  .info__body ol,
+  .info__body p,
+  .info__body ul {
+    margin-bottom: 25px
+  }
+  .info__body img {
+    clear: both;
+    width: 40%
+  }
+  .info__body img:nth-of-type(odd) {
+    float: left;
+    margin-right: 30px
+  }
+  .info__body img:nth-of-type(even) {
+    float: right;
+    margin-left: 30px
   }
   .info__body a:hover {
     color: #e3e2ca
@@ -2204,11 +2212,6 @@ span.watcher-element {
   }
   .article__title {
     font-size: 80px
-  }
-  .article__content img {
-    width: 400px;
-    float: left;
-    margin-right: 20px
   }
   .faq {
     padding: 55px 0 100px
@@ -2287,24 +2290,6 @@ span.watcher-element {
   }
   .map__container {
     padding-top: 35%
-  }
-  .about-page {
-    padding: 55px 0 50px
-  }
-  .about-page__title {
-    font-size: 80px
-  }
-  .about-page__body img {
-    width: 45%;
-    margin-top: 20px
-  }
-  .about-page__body img.left {
-    float: left;
-    margin-right: 20px
-  }
-  .about-page__body img.right {
-    float: right;
-    margin-left: 20px
   }
 }
 @media (min-width:79.99875em) {
@@ -2462,9 +2447,6 @@ span.watcher-element {
   .news__item:nth-child(3n+3) .news__item-wrap {
     transition-delay: .6s
   }
-  .article__content img {
-    width: 800px
-  }
   .faq__item-title {
     padding: 35px 140px 35px 60px;
     font-size: 30px
@@ -2541,9 +2523,6 @@ span.watcher-element {
     font-size: 100px
   }
   .map__title {
-    font-size: 100px
-  }
-  .about-page__title {
     font-size: 100px
   }
 }
