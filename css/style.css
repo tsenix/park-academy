@@ -685,7 +685,11 @@ body::after {
   position: relative;
   width: 100%;
   padding: 10px;
+  text-align: center;
   transition: all .5s ease
+}
+.select__option[hidden] {
+  display: none
 }
 .select__option::before {
   content: "";
