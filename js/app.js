@@ -4704,9 +4704,7 @@
             }));
             const headerVideoObserver = new IntersectionObserver((entries => {
                 if (entries.some((entry => !entry.isIntersecting))) setHeaderVideoMuted(true);
-            }), {
-                root: headerVideo.closest(".wrapper")
-            });
+            }));
             headerVideoObserver.observe(headerVideo);
         }
         document.addEventListener("DOMContentLoaded", (() => {
@@ -4739,7 +4737,8 @@
             const modalWrap = document.querySelector(".popup__wrapper");
             const modalClose = document.querySelector(".popup__close");
             const modalOpenButtons = document.querySelectorAll(".modal-cart-open");
-            for (const openButton of modalOpenButtons) openButton.addEventListener("click", (() => {
+            for (const openButton of modalOpenButtons) openButton.addEventListener("click", (e => {
+                e.preventDefault();
                 modal.classList.add("popup_show");
                 modal.setAttribute("aria-hidden", "false");
                 document.documentElement.classList.add("lock");
